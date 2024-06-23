@@ -1,2 +1,2 @@
 # devsmn.github.io
-Static site for hosting files on the root level
+Static site for hosting files in the root repository because some services only craw the first level.
