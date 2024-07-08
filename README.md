@@ -1,4 +1,4 @@
-Static site for hosting files in the root repository because some services only craw the first level.
+Static site for hosting root files because some services cannot crawl more than one level.
 
 # Athena 
 Check out my android app 
