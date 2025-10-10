@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-300.woff2') format('woff2')
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-regular.woff2') format('woff2')
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-500.woff2') format('woff2')
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --bg: #111317;
+  --surface: #161822;
+  --text: #e0e0e0;
+  --muted: #999ea6;
+  --accent: #d4af7f;
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(17,19,23,0.95);
+  border-bottom: 1px solid #222530;
+  z-index: 10;
+}
+
+.logo { 
+  font-weight: 600; 
+  font-size: 1.3rem; 
+  color: var(--accent); 
+}
+
+.navbar nav a { 
+  margin-left: 1rem; 
+  text-decoration: none; 
+  color: var(--text); 
+  font-weight: 400; 
+  transition: color 0.2s; 
+}
+
+.navbar nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  min-height: 70vh; 
+  padding: 2rem;
+  background: var(--bg);
+}
+
+.hero-inner {
+  max-width: 600px;
+  text-align: center;
+}
+
+.avatar { 
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  margin-bottom: 1rem; 
+  border: 2px solid var(--accent); 
+}
+
+.hero h1 { font-weight: 300; font-size: 2rem; margin-bottom: 0.5rem; }
+.subtitle { color: var(--muted); margin-bottom: 1.5rem; font-weight: 300; }
+
+/* Buttons */
+.btn-primary, .btn-secondary { 
+  display:inline-block; 
+  padding:0.7rem 1.4rem; 
+  border-radius: var(--radius); 
+  font-weight:500; 
+  text-decoration:none; 
+  transition: all 0.3s ease; 
+}
+
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-primary:hover { box-shadow: 0 0 20px var(--accent); transform: translateY(-2px); }
+
+.btn-secondary { border:2px solid var(--accent); color: var(--accent); }
+.btn-secondary:hover { background: var(--accent); color: var(--bg); transform: translateY(-2px); }
+
+/* Projects Header */
+.projects-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--surface);
+}
+
+.projects-header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* Apps Section */
+.apps-section {
+  width: 100%;
+  padding: 2rem;
+  background: var(--surface);
+}
+
+/* App Rows */
+.app-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playstore-mini {
+  margin-top: 10px;
+}
+
+.playstore-link {
+  text-decoration: none;
+}
+
+.playstore-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 6px 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.playstore-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.playstore-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.playstore-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.playstore-meta .rating {
+  font-weight: 600;
+  color: #fbc02d; 
+}
+
+.playstore-meta .downloads {
+  opacity: 0.85;
+  font-size: 0.8em;
+}
+
+.app-row.reverse { flex-direction: row-reverse; }
+
+/* Images */
+.app-image img {
+  width: 100%;
+  max-width: 120px;      
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+  object-fit: cover;    
+}
+
+.app-image img:hover { transform: scale(1.03); }
+
+/* Text */
+.app-text { flex: 1; }
+
+.app-text h2 { margin-bottom: 0.5rem; font-weight:500; }
+.app-text p { color: var(--muted); font-weight:300; margin-bottom:1rem; }
+/* Tech tags matching your dark theme */
+.tech-tags {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tags span {
+  background-color: rgba(255, 255, 255, 0.08); /* subtle dark-transparent background */
+  color: var(--accent);                        /* use your accent color */
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.tech-tags span:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* slightly brighter on hover */
+  transform: translateY(-1px);
+  cursor: default;
+}
+
+
+/* Contact Section */
+#contact { 
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+#contact h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/*#contact h2 { font-weight:500; margin-bottom:1rem; }*/
+#contact p { color: var(--muted); font-weight:300; margin-bottom:1rem; }
+
+
+/* Footer */
+footer {
+  background: #101217;
+  padding:2rem;
+  text-align:center;
+  font-size:0.9rem;
+  color: var(--muted);
+  border-top:1px solid #222530;
+}
+
+footer a { color: var(--accent); text-decoration:none; }
+footer a:hover { text-decoration: underline; }
+
+
+@media(max-width: 900px) {
+  .app-row, .app-row.reverse { flex-direction: column; }
+}
